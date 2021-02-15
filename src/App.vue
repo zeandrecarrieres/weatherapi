@@ -3,7 +3,7 @@
   <div class="container">
     <img alt="weather logo" id="logo" src="./assets/logo.png">
     <aside>
-      <label for="city" class="label">Type the name of the city:</label>
+      <label for="city" class="label">Type the name of the city:</label><br>
       <form class="search-location" v-on:submit.prevent='getWeather'>
         <input type="text" id="city" name="city" class="city" v-model="citySearch" autocomplete="off">
         <button type="submit" id="submit">Search</button>
