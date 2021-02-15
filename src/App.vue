@@ -76,7 +76,7 @@
     getWeather: async function() {
       console.log(this.citySearch)
       const key = "52b601814b5a1dcb467d9468625d306f"
-      const callURL = `http://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&appid=${key}&units=metric`
+      const callURL = `https://api.openweathermap.org/data/2.5/weather?q=${this.citySearch}&appid=${key}&units=metric`
 
       //call API with try catch
       try {
