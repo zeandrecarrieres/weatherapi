@@ -30,7 +30,12 @@
           <p>{{weather.feelsLike}}</p>
         </section>
 
-        <div v-if="isDay" class="jour">
+        
+      </div>
+     
+    </main>
+    <br>
+<div v-if="isDay" class="jour">
           <img src="./assets/day_bg.jpg" alt="">
         </div>
         <div v-else class="nuit">
@@ -38,10 +43,6 @@
         </div>
         <p v-if="isDay"> </p>
         <p v-else> ZZZZzzzzzzz!!!!!!!</p>
-      </div>
-     
-    </main>
-
   </div>
 
 </template>
@@ -85,7 +86,7 @@
         this.citySearch = "";
         this.weather.cityName = data.name; 
         this.weather.country = data.sys.country;
-        this.weather.temperature = Math.round(data.main.temp);
+        this.weather.temperature = `${Math.round(data.main.temp)} ºC`;
         this.weather.description = data.weather[0].description
         this.weather.lowTemp = Math.round(data.main.temp_min)
         this.weather.highTemp = Math.round(data.main.temp_max)
@@ -174,20 +175,26 @@
     border: 1px solid white;
   }
 
-.content {
-  display: flex;
-  justify-content: center;
+.content  {
+ 
 }
+
+.details h2 {
+ text-transform: uppercase;
+}
+
 .nuit img {
-  width: 300px;
+  width: 200px;
   height: 200px;
   background: blue;
+  border-radius: 50%;
 }
 
 .jour img {
-  width: 300px;
+  width: 200px;
   height: 200px;
-  ;
+   border-radius: 50%;
+  
   
 }
 
